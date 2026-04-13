@@ -123,6 +123,46 @@
             "@type": "Answer",
             "text": "Settlement is instant or near-instant depending on the solution. Crypto to Fiat converts and settles to USD in real time. Crypto to Crypto settles directly to your exchange wallet instantly. The Credit Card On-Ramp delivers USDC to your Polygon wallet near-instantly."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does the Credit Card to Crypto On-Ramp require identity verification (KYC)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When a customer uses a credit card on the On-Ramp, they are purchasing a digital asset (USDC stablecoin) as part of the payment. Any purchase of cryptocurrency is subject to financial regulations requiring on-ramp providers to verify the buyer's identity. This KYC requirement is a regulatory mandate across the global digital asset industry — it protects both the buyer and the merchant from fraud and unauthorized transactions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does KYC take for the Credit Card On-Ramp and what does a customer need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "KYC through JJS Global's on-ramp providers typically takes under 60 seconds. The customer only needs to provide a photo of a government-issued ID such as a driver's license or passport. Once verified with a provider, the customer may not need to repeat the process on future purchases through that same provider."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does JJS Global's network of 20+ on-ramp providers improve checkout approval rates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "JJS Global integrates 20+ on-ramp providers and uses geo-intelligent routing to automatically select the best provider for the customer's geographic location at checkout. This maximizes approval rates globally, reduces failed transactions, and delivers a smoother checkout experience regardless of where the customer is located."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does settlement speed on the Credit Card On-Ramp compare to credit cards and ACH?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Credit card payments typically settle to merchants in 1–3 business days; ACH and eCheck payments can take 3–5 days or longer. JJS Global's Credit Card to Crypto On-Ramp settles USDC directly to the merchant's non-custodial Polygon wallet on blockchain rails near-instantly — with no processor holding funds, no float, and no waiting. It is the fastest settlement option available to merchants today."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is JJS Global's crypto payment processing available internationally?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Cryptocurrency operates without geographic borders. Merchants can accept payments from customers in any country without currency conversion headaches or inflated cross-border processing fees. JJS Global serves both domestic and international merchants."
+          }
         }
       ]
     }
@@ -155,6 +195,7 @@
   }
 
   html { scroll-behavior: smooth; }
+  [id] { scroll-margin-top: 40px; }
   body {
     font-family: 'Sora', sans-serif;
     background: var(--black);
@@ -930,7 +971,7 @@
     <p class="hero-sub">The payments landscape is shifting. Merchants who accept Bitcoin, Ethereum, and digital currencies today will lead tomorrow. JJS Global gives you three distinct crypto payment processing solutions — with zero guesswork and zero volatility risk.</p>
     <div class="hero-ctas">
       <a href="https://jjsglobal.info/CRYPTOCALL" class="btn-primary">Schedule a Consultation &rarr;</a>
-      <a href="#solutions" class="btn-outline">Explore Solutions &darr;</a>
+      <a href="javascript:void(0)" onclick="document.getElementById('solutions').scrollIntoView({behavior:'smooth', block:'start'})" class="btn-outline">Explore Solutions &darr;</a>
     </div>
   </div>
 </section>
@@ -1042,16 +1083,32 @@
         <div class="solution-body">
           <div class="solution-badge">Decentralized</div>
           <h3>How It Works</h3>
-          <p>At checkout, your customer uses their credit card to purchase a stablecoin (USDC). An on-ramp provider handles the crypto purchase, and the transaction completes. You receive funds virtually instantly in your non-custodial Polygon wallet. Fully decentralized, yet familiar for the customer.</p>
+          <p>At checkout, your customer uses their credit card to purchase USDC — a USD-pegged stablecoin. Our plugin or API automatically selects the best on-ramp provider for the customer's geographic location from a network of 20+ global providers, maximizing approval rates worldwide. The transaction completes and funds land in your non-custodial Polygon wallet near-instantly. Fully decentralized. No banking rails. No processor float. No waiting.</p>
           <ul class="solution-features">
-            <li>Customer pays with a standard credit card</li>
-            <li>Stablecoin (USDC) is on-ramped at checkout</li>
-            <li>Funds land in your non-custodial Polygon wallet</li>
-            <li>Fully decentralized — operates outside traditional payment rails</li>
-            <li>Near-instant settlement with stablecoin price stability</li>
-            <li>Easy plugin setup for WooCommerce, Magento & other platforms</li>
+            <li>Customer pays with a standard credit card — familiar checkout experience</li>
+            <li>Geo-intelligent routing selects the best on-ramp provider by customer location</li>
+            <li>Network of 20+ on-ramp providers for global coverage and high approval rates</li>
+            <li>Stablecoin (USDC) is on-ramped at checkout — no crypto volatility exposure</li>
+            <li>Funds land in your non-custodial Polygon wallet near-instantly</li>
+            <li>Fully decentralized — operates completely outside traditional payment rails</li>
+            <li>Quick identity verification (KYC) required — typically under 60 seconds</li>
+            <li>Easy plugin setup for WooCommerce, Magento & other platforms, or full API</li>
           </ul>
-          <div class="ideal-for"><strong>Ideal for:</strong> Merchants who want to operate on decentralized infrastructure while still giving their customers the familiarity of paying with a credit card. The bridge between traditional and decentralized finance.</div>
+
+          <!-- KYC CALLOUT -->
+          <div style="margin-top: 22px; padding: 20px 22px; background: rgba(245,158,11,0.07); border: 1px solid rgba(245,158,11,0.2); border-radius: 10px;">
+            <div style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px;">A Note on Identity Verification</div>
+            <p style="font-size: 13px; color: var(--gray-light); line-height: 1.65; font-weight: 300; margin: 0;">Because customers are purchasing a digital asset (USDC) with their credit card, on-ramp providers are required by regulation to verify the buyer's identity — just as a bank or exchange would. This one-time KYC step typically takes under 60 seconds and requires only a photo of a government-issued ID. It is a legal safeguard that protects both the customer and the merchant — not a barrier, but a bridge to a more secure transaction.</p>
+          </div>
+
+          <!-- SUGGESTED MERCHANT LANGUAGE -->
+          <div style="margin-top: 16px; padding: 20px 22px; background: rgba(0,229,204,0.05); border: 1px solid rgba(0,229,204,0.15); border-radius: 10px;">
+            <div style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--cyan); margin-bottom: 10px;">&#x1F4AC; Suggested On-Site Language for Your Customers</div>
+            <p style="font-size: 13px; color: var(--gray-light); line-height: 1.65; font-weight: 300; margin: 0 0 10px 0; font-style: italic;">"To complete your purchase using our secure decentralized payment option, a quick one-time identity verification is required. This takes less than 60 seconds — simply snap a photo of your government-issued ID. This step is required by our payment provider to protect you as a buyer and complies with financial regulations for digital asset purchases. Your information is encrypted and never stored by us."</p>
+            <p style="font-size: 12px; color: var(--gray); line-height: 1.6; font-weight: 300; margin: 0;">Place this language near your checkout or on a pre-checkout information page to set expectations before the customer reaches KYC — reducing surprise and cart abandonment.</p>
+          </div>
+
+          <div class="ideal-for" style="margin-top: 16px;"><strong>Ideal for:</strong> Merchants who want to operate on fully decentralized infrastructure, receive near-instant settlement with zero processor hold times, and offer customers the familiarity of paying by credit card. The definitive bridge between traditional commerce and decentralized finance.</div>
         </div>
       </div>
 
@@ -1311,6 +1368,77 @@
       <div style="background: var(--dark-card); border: 1px solid var(--dark-border); border-radius: 14px; padding: 32px 36px;">
         <h3 style="font-size: 17px; font-weight: 600; margin-bottom: 12px; color: var(--white);">Is JJS Global's crypto payment processing available internationally?</h3>
         <p style="font-size: 15px; color: var(--gray); line-height: 1.7; font-weight: 300;">Yes. Cryptocurrency operates without geographic borders, making it ideal for cross-border commerce. Merchants can accept payments from customers in any country without currency conversion headaches, international banking friction, or inflated cross-border processing fees. JJS Global serves both domestic and international merchants.</p>
+      </div>
+
+      <!-- KYC & ON-RAMP FAQS -->
+      <div style="margin-top: 16px; margin-bottom: 4px; font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); text-align: center; padding: 8px 0;">Credit Card On-Ramp — KYC &amp; Settlement Deep Dive</div>
+
+      <div style="background: var(--dark-card); border: 1px solid rgba(245,158,11,0.25); border-radius: 14px; padding: 32px 36px;">
+        <h3 style="font-size: 17px; font-weight: 600; margin-bottom: 12px; color: var(--white);">Why does the Credit Card to Crypto On-Ramp require identity verification (KYC)?</h3>
+        <p style="font-size: 15px; color: var(--gray); line-height: 1.7; font-weight: 300; margin-bottom: 14px;">When a customer uses a credit card to complete an On-Ramp transaction, they are not simply paying for a product — they are <em style="color: var(--gray-light);">purchasing a digital asset</em> (USDC stablecoin) as part of the payment process. Any purchase of cryptocurrency, including stablecoins, is subject to financial regulations that require on-ramp providers to verify the identity of the buyer. This is the same requirement a customer would face when opening a crypto exchange account or purchasing digital assets through any regulated platform.</p>
+        <p style="font-size: 15px; color: var(--gray); line-height: 1.7; font-weight: 300;">This KYC requirement is <em style="color: var(--gray-light);">not unique to JJS Global</em> — it is a regulatory mandate across the global digital asset industry. The verification step exists to prevent fraud, money laundering, and unauthorized use of payment instruments, protecting both the buyer and the merchant in every transaction.</p>
+      </div>
+
+      <div style="background: var(--dark-card); border: 1px solid rgba(245,158,11,0.25); border-radius: 14px; padding: 32px 36px;">
+        <h3 style="font-size: 17px; font-weight: 600; margin-bottom: 12px; color: var(--white);">How long does KYC take, and what does the customer need to provide?</h3>
+        <p style="font-size: 15px; color: var(--gray); line-height: 1.7; font-weight: 300; margin-bottom: 14px;">The KYC process through our on-ramp providers is designed to be as fast and frictionless as possible. In most cases, the entire verification takes <em style="color: var(--gray-light);">under 60 seconds</em>. The customer is typically asked to provide a photo of a government-issued ID — such as a driver's license or passport. No in-person visit, no lengthy forms, no waiting days for approval.</p>
+        <p style="font-size: 15px; color: var(--gray); line-height: 1.7; font-weight: 300;">Once a customer has completed KYC with a given on-ramp provider, they may not be required to repeat the process on future transactions with that same provider — making the experience smoother over time. As merchants, positioning this step clearly and positively before the customer reaches checkout is the most effective way to reduce hesitation and cart abandonment.</p>
+      </div>
+
+      <div style="background: var(--dark-card); border: 1px solid rgba(245,158,11,0.25); border-radius: 14px; padding: 32px 36px;">
+        <h3 style="font-size: 17px; font-weight: 600; margin-bottom: 12px; color: var(--white);">What language should I use on my website to help customers understand KYC?</h3>
+        <p style="font-size: 15px; color: var(--gray); line-height: 1.7; font-weight: 300; margin-bottom: 20px;">Transparency is everything. The most effective approach is to set expectations <em style="color: var(--gray-light);">before</em> the customer reaches the KYC step — on your product page, checkout page, or in a pre-checkout informational note. Here are several language examples you can adapt for your site:</p>
+
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <div style="background: rgba(0,229,204,0.05); border-left: 3px solid var(--cyan); border-radius: 0 8px 8px 0; padding: 14px 18px;">
+            <div style="font-family: 'Space Mono', monospace; font-size: 10px; color: var(--cyan); letter-spacing: 2px; margin-bottom: 6px;">CHECKOUT PAGE NOTE</div>
+            <p style="font-size: 13px; color: var(--gray-light); line-height: 1.65; font-style: italic; margin: 0;">"Paying with our decentralized payment option? A quick identity check (under 60 seconds) is required to protect you as a buyer. Have your government-issued ID ready."</p>
+          </div>
+          <div style="background: rgba(0,229,204,0.05); border-left: 3px solid var(--cyan); border-radius: 0 8px 8px 0; padding: 14px 18px;">
+            <div style="font-family: 'Space Mono', monospace; font-size: 10px; color: var(--cyan); letter-spacing: 2px; margin-bottom: 6px;">PRODUCT PAGE / FAQ</div>
+            <p style="font-size: 13px; color: var(--gray-light); line-height: 1.65; font-style: italic; margin: 0;">"Our decentralized payment option processes your purchase through regulated digital asset infrastructure. As required by law, a brief identity verification (photo ID) is needed to complete your transaction. This takes less than a minute and keeps your purchase fully protected."</p>
+          </div>
+          <div style="background: rgba(0,229,204,0.05); border-left: 3px solid var(--cyan); border-radius: 0 8px 8px 0; padding: 14px 18px;">
+            <div style="font-family: 'Space Mono', monospace; font-size: 10px; color: var(--cyan); letter-spacing: 2px; margin-bottom: 6px;">EMAIL / ORDER CONFIRMATION</div>
+            <p style="font-size: 13px; color: var(--gray-light); line-height: 1.65; font-style: italic; margin: 0;">"You chose our secure decentralized checkout option. Before completing your order, you'll be asked to verify your identity — this is a regulatory requirement for digital asset purchases and only takes about 60 seconds. Thank you for your patience."</p>
+          </div>
+        </div>
+        <p style="font-size: 13px; color: var(--gray); line-height: 1.6; font-weight: 300; margin-top: 16px; margin-bottom: 0;">The key message across all placements: <em style="color: var(--gray-light);">this step protects the customer, it's fast, and it's required by law — not by the merchant.</em> Removing the sense that the merchant is the one imposing the requirement significantly reduces friction and abandonment.</p>
+      </div>
+
+      <div style="background: var(--dark-card); border: 1px solid rgba(245,158,11,0.25); border-radius: 14px; padding: 32px 36px;">
+        <h3 style="font-size: 17px; font-weight: 600; margin-bottom: 12px; color: var(--white);">How does JJS Global's network of 20+ on-ramp providers improve the checkout experience?</h3>
+        <p style="font-size: 15px; color: var(--gray); line-height: 1.7; font-weight: 300; margin-bottom: 14px;">Not all on-ramp providers operate in every country, support every card type, or deliver the same approval rates in every region. When a merchant relies on a single on-ramp provider, they are exposing their checkout to the limitations of that one provider — coverage gaps, regional restrictions, and lower approval rates in certain markets.</p>
+        <p style="font-size: 15px; color: var(--gray); line-height: 1.7; font-weight: 300; margin-bottom: 14px;">JJS Global's plugin and API integrate a network of <em style="color: var(--gray-light);">20+ on-ramp providers</em> and use <em style="color: var(--gray-light);">geo-intelligent routing</em> to automatically select the best available provider based on the customer's geographic location at the moment of checkout. This means a customer in the United States, the United Kingdom, Canada, or Australia is routed to the provider most likely to approve their transaction quickly and seamlessly in their region.</p>
+        <p style="font-size: 15px; color: var(--gray); line-height: 1.7; font-weight: 300;">The result for merchants: higher global approval rates, fewer failed transactions, and a consistently smoother checkout experience for customers — regardless of where they are in the world.</p>
+      </div>
+
+      <div style="background: var(--dark-card); border: 1px solid rgba(245,158,11,0.25); border-radius: 14px; padding: 32px 36px;">
+        <h3 style="font-size: 17px; font-weight: 600; margin-bottom: 12px; color: var(--white);">How does settlement on the Credit Card On-Ramp compare to credit cards and ACH?</h3>
+        <p style="font-size: 15px; color: var(--gray); line-height: 1.7; font-weight: 300; margin-bottom: 20px;">This is where the Credit Card to Crypto On-Ramp is in a category entirely its own. Traditional payment rails were not designed for speed — they were designed for a banking system built decades ago. Here is how settlement timelines compare:</p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 20px;">
+          <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--dark-border); border-radius: 10px; padding: 18px 20px; text-align: center;">
+            <div style="font-size: 28px; margin-bottom: 6px;">💳</div>
+            <div style="font-family: 'Space Mono', monospace; font-size: 10px; color: var(--gray); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">Credit Card</div>
+            <div style="font-size: 18px; font-weight: 700; color: #EF4444; margin-bottom: 4px;">1–3 Days</div>
+            <div style="font-size: 12px; color: var(--gray); line-height: 1.5;">Processor holds funds overnight. High-risk merchants may wait 2–3+ days depending on industry and reserve requirements.</div>
+          </div>
+          <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--dark-border); border-radius: 10px; padding: 18px 20px; text-align: center;">
+            <div style="font-size: 28px; margin-bottom: 6px;">🏦</div>
+            <div style="font-family: 'Space Mono', monospace; font-size: 10px; color: var(--gray); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">ACH / eCheck</div>
+            <div style="font-size: 18px; font-weight: 700; color: #EF4444; margin-bottom: 4px;">3–5+ Days</div>
+            <div style="font-size: 12px; color: var(--gray); line-height: 1.5;">Bank-to-bank transfers move through the ACH network in batches. Merchants often wait a week or more for funds to clear and settle.</div>
+          </div>
+          <div style="background: rgba(0,229,204,0.06); border: 1px solid rgba(0,229,204,0.25); border-radius: 10px; padding: 18px 20px; text-align: center;">
+            <div style="font-size: 28px; margin-bottom: 6px;">⚡</div>
+            <div style="font-family: 'Space Mono', monospace; font-size: 10px; color: var(--cyan); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">Credit Card On-Ramp</div>
+            <div style="font-size: 18px; font-weight: 700; color: var(--cyan); margin-bottom: 4px;">Near-Instant</div>
+            <div style="font-size: 12px; color: var(--gray); line-height: 1.5;">USDC settles directly to your non-custodial Polygon wallet on blockchain rails. No processor. No float. No holds. Funds are yours immediately.</div>
+          </div>
+        </div>
+
+        <p style="font-size: 15px; color: var(--gray); line-height: 1.7; font-weight: 300; margin: 0;">The 60-second KYC is the only additional step a customer takes — and in exchange, the merchant receives something no credit card processor or bank has ever been able to offer: <em style="color: var(--gray-light);">truly instant, final, irreversible settlement with no intermediary holding their funds.</em> For cash-flow-sensitive businesses, high-volume merchants, and any operator tired of waiting on processors — this changes everything.</p>
       </div>
 
     </div>
